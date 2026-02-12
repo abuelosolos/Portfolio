@@ -1,210 +1,169 @@
-// Portfolio project images - add your actual design images here
-const portfolioImages = {
-    0: [ // AI Powered Game Engine
-        'https://images.unsplash.com/photo-1561070791-2526d30994b5?w=1200&h=800&fit=crop',
-        'https://images.unsplash.com/photo-1552820728-8b83bb6b773f?w=1200&h=800&fit=crop',
-        'https://images.unsplash.com/photo-1563207153-f403bf289096?w=1200&h=800&fit=crop'
-    ],
-    1: [ // Game Asset Store
-        'https://images.unsplash.com/photo-1558655146-364adaf1fcc9?w=1200&h=800&fit=crop',
-        'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1200&h=800&fit=crop',
-        'https://images.unsplash.com/photo-1551650975-87deedd944c3?w=1200&h=800&fit=crop'
-    ],
-    2: [ // DeFi App
-        'https://images.unsplash.com/photo-1558655146-d09347e92766?w=1200&h=800&fit=crop',
-        'https://images.unsplash.com/photo-1563986768609-322da13575f3?w=1200&h=800&fit=crop',
-        'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1200&h=800&fit=crop'
-    ],
-    3: [ // Shoe Store Site
-        'https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=1200&h=800&fit=crop',
-        'https://images.unsplash.com/photo-1525966222134-fcfa99b8ae77?w=1200&h=800&fit=crop',
-        'https://images.unsplash.com/photo-1543163521-1bf539c55dd2?w=1200&h=800&fit=crop'
-    ],
-    4: [ // Design System
-        'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1200&h=800&fit=crop',
-        'https://images.unsplash.com/photo-1559028012-481c04fa702d?w=1200&h=800&fit=crop',
-        'https://images.unsplash.com/photo-1558655146-9f40138edfeb?w=1200&h=800&fit=crop'
-    ],
-    5: [ // SaaS Platform UI
-        'https://images.unsplash.com/photo-1551650975-87deedd944c3?w=1200&h=800&fit=crop',
-        'https://images.unsplash.com/photo-1557804506-669a67965ba0?w=1200&h=800&fit=crop',
-        'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=1200&h=800&fit=crop'
-    ]
-};
-
-let currentProject = 0;
-let currentImageIndex = 0;
-
-// Smooth scroll for anchor links
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        const target = document.querySelector(this.getAttribute('href'));
-        if (target) {
-            target.scrollIntoView({
-                behavior: 'smooth',
-                block: 'start'
-            });
-        }
-    });
-});
-
-// Intersection Observer for portfolio items
-const observerOptions = {
-    threshold: 0.15,
-    rootMargin: '0px 0px -100px 0px'
-};
-
-const observer = new IntersectionObserver((entries) => {
-    entries.forEach((entry, index) => {
-        if (entry.isIntersecting) {
-            setTimeout(() => {
-                entry.target.classList.add('visible');
-            }, entry.target.dataset.index * 150);
-            observer.unobserve(entry.target);
-        }
-    });
-}, observerOptions);
-
-document.querySelectorAll('.portfolio-item').forEach(item => {
-    observer.observe(item);
-});
-
-// Mobile tap handling for view UI buttons
-const portfolioItems = document.querySelectorAll('.portfolio-item');
-
-portfolioItems.forEach((item) => {
-    // Mobile touch handling - show/hide view button
-    item.addEventListener('touchstart', function(e) {
-        // Don't interfere if clicking the view button itself
-        if (e.target.closest('.view-ui-btn')) {
+// Slider functionality - DYNAMIC SLIDERS
+class ImageSlider {
+    constructor(sliderIndex) {
+        this.sliderIndex = sliderIndex;
+        this.currentIndex = 0;
+        this.track = document.querySelector(`.slider-track[data-slider="${sliderIndex}"]`);
+        
+        if (!this.track) {
+            console.error(`Slider track not found for index ${sliderIndex}`);
             return;
         }
         
-        // Remove active class from all other items
-        portfolioItems.forEach(otherItem => {
-            if (otherItem !== item) {
-                otherItem.classList.remove('active');
-            }
-        });
+        this.images = this.track.querySelectorAll('.slider-image-wrapper');
+        this.totalImages = this.images.length;
+        this.prevBtn = document.querySelector(`.prev-btn[data-slider="${sliderIndex}"]`);
+        this.nextBtn = document.querySelector(`.next-btn[data-slider="${sliderIndex}"]`);
+        this.counter = this.track.closest('.slider-container').querySelector('.slider-counter');
+        this.dotsContainer = document.querySelector(`.slider-dots[data-slider="${sliderIndex}"]`);
         
-        // Toggle active class on current item
-        this.classList.toggle('active');
-        e.stopPropagation();
-    });
-});
-
-// Close active portfolio items when tapping outside on mobile
-document.addEventListener('touchstart', function(e) {
-    if (!e.target.closest('.portfolio-item')) {
-        portfolioItems.forEach(item => item.classList.remove('active'));
+        this.init();
     }
+
+    init() {
+        // Generate dots dynamically
+        this.generateDots();
+        
+        // Button event listeners
+        this.prevBtn.addEventListener('click', () => this.prev());
+        this.nextBtn.addEventListener('click', () => this.next());
+        
+        // Click to open modal
+        this.images.forEach((wrapper, index) => {
+            wrapper.addEventListener('click', () => {
+                openModal(this.sliderIndex, index);
+            });
+        });
+
+        this.updateUI();
+    }
+
+    generateDots() {
+        // Clear existing dots
+        this.dotsContainer.innerHTML = '';
+        
+        // Create a dot for each image
+        for (let i = 0; i < this.totalImages; i++) {
+            const dot = document.createElement('div');
+            dot.className = 'slider-dot';
+            if (i === 0) dot.classList.add('active');
+            
+            dot.addEventListener('click', () => {
+                this.goToSlide(i);
+            });
+            
+            this.dotsContainer.appendChild(dot);
+        }
+        
+        // Update dots reference
+        this.dots = this.dotsContainer.querySelectorAll('.slider-dot');
+    }
+
+    prev() {
+        this.currentIndex = (this.currentIndex - 1 + this.totalImages) % this.totalImages;
+        this.updateUI();
+    }
+
+    next() {
+        this.currentIndex = (this.currentIndex + 1) % this.totalImages;
+        this.updateUI();
+    }
+
+    goToSlide(index) {
+        this.currentIndex = index;
+        this.updateUI();
+    }
+
+    updateUI() {
+        const offset = -this.currentIndex * 100;
+        this.track.style.transform = `translateX(${offset}%)`;
+        
+        this.counter.querySelector('.current').textContent = this.currentIndex + 1;
+        this.counter.querySelector('.total').textContent = this.totalImages;
+
+        this.dots.forEach((dot, index) => {
+            dot.classList.toggle('active', index === this.currentIndex);
+        });
+
+        this.prevBtn.disabled = this.currentIndex === 0;
+        this.nextBtn.disabled = this.currentIndex === this.totalImages - 1;
+    }
+}
+
+// Auto-detect and initialize all sliders
+const sliders = [];
+const sliderTracks = document.querySelectorAll('.slider-track');
+
+sliderTracks.forEach((track) => {
+    const sliderIndex = parseInt(track.getAttribute('data-slider'));
+    sliders[sliderIndex] = new ImageSlider(sliderIndex);
 });
 
-// Modal carousel functionality
+// Modal functionality
 const modal = document.getElementById('imageModal');
-const modalImg = document.getElementById('modalImage');
-const closeModal = document.getElementById('closeModal');
-const prevImage = document.getElementById('prevImage');
-const nextImage = document.getElementById('nextImage');
-const carouselCounter = document.getElementById('carouselCounter');
+const modalImage = document.getElementById('modalImage');
+const closeModalBtn = document.getElementById('closeModal');
+const modalPrev = document.getElementById('modalPrev');
+const modalNext = document.getElementById('modalNext');
+const modalCounter = document.getElementById('modalCounter');
 
-console.log('Modal elements:', { modal, modalImg, closeModal, prevImage, nextImage, carouselCounter });
+let currentModalSlider = 0;
+let currentModalIndex = 0;
 
-function updateCarousel() {
-    const images = portfolioImages[currentProject];
-    console.log('Updating carousel:', currentProject, currentImageIndex, images);
-    modalImg.src = images[currentImageIndex];
-    carouselCounter.textContent = `${currentImageIndex + 1} / ${images.length}`;
+function openModal(sliderIndex, imageIndex) {
+    currentModalSlider = sliderIndex;
+    currentModalIndex = imageIndex;
+    updateModalImage();
+    modal.classList.add('active');
+    document.body.style.overflow = 'hidden';
+}
+
+function closeModal() {
+    modal.classList.remove('active');
+    document.body.style.overflow = 'auto';
+}
+
+function updateModalImage() {
+    const slider = sliders[currentModalSlider];
+    const imageSrc = slider.images[currentModalIndex].querySelector('img').src;
+    modalImage.src = imageSrc;
+    modalCounter.textContent = `${currentModalIndex + 1} / ${slider.totalImages}`;
     
-    // Animate image change
-    modalImg.style.opacity = '0';
+    modalImage.style.opacity = '0';
     setTimeout(() => {
-        modalImg.style.opacity = '1';
+        modalImage.style.opacity = '1';
     }, 100);
 }
 
+closeModalBtn.addEventListener('click', closeModal);
 
-// Add click handlers to portfolio items for image carousel modal
-const portfolioItemsForModal = document.querySelectorAll('.portfolio-item');
-console.log('Found portfolio items:', portfolioItemsForModal.length);
-
-portfolioItemsForModal.forEach((item) => {
-    const projectIndex = item.getAttribute('data-index');
-    console.log('Adding click handler to item with index:', projectIndex);
-    
-    item.addEventListener('click', function(event) {
-        // Don't open modal if clicking the view UI button
-        if (event.target.closest('.view-ui-btn')) {
-            return;
-        }
-        
-        event.preventDefault();
-        event.stopPropagation();
-        
-        console.log('Portfolio item clicked! Index:', projectIndex);
-        currentProject = parseInt(projectIndex);
-        currentImageIndex = 0;
-        
-        console.log('Opening modal for project:', currentProject);
-        console.log('Modal element:', modal);
-        
-        if (modal) {
-            modal.classList.add('active');
-            modal.style.display = 'flex';
-            updateCarousel();
-            document.body.style.overflow = 'hidden';
-        } else {
-            console.error('Modal element not found!');
-        }
-    }, true); // Use capture phase
-});
-
-prevImage.addEventListener('click', function(e) {
-    e.stopPropagation();
-    const images = portfolioImages[currentProject];
-    currentImageIndex = (currentImageIndex - 1 + images.length) % images.length;
-    updateCarousel();
-});
-
-nextImage.addEventListener('click', function(e) {
-    e.stopPropagation();
-    const images = portfolioImages[currentProject];
-    currentImageIndex = (currentImageIndex + 1) % images.length;
-    updateCarousel();
-});
-
-closeModal.addEventListener('click', function() {
-    modal.classList.remove('active');
-    document.body.style.overflow = 'auto';
-});
-
-modal.addEventListener('click', function(e) {
+modal.addEventListener('click', (e) => {
     if (e.target === modal) {
-        modal.classList.remove('active');
-        document.body.style.overflow = 'auto';
+        closeModal();
     }
+});
+
+modalPrev.addEventListener('click', () => {
+    const slider = sliders[currentModalSlider];
+    currentModalIndex = (currentModalIndex - 1 + slider.totalImages) % slider.totalImages;
+    updateModalImage();
+});
+
+modalNext.addEventListener('click', () => {
+    const slider = sliders[currentModalSlider];
+    currentModalIndex = (currentModalIndex + 1) % slider.totalImages;
+    updateModalImage();
 });
 
 // Keyboard navigation
-document.addEventListener('keydown', function(e) {
+document.addEventListener('keydown', (e) => {
     if (modal.classList.contains('active')) {
         if (e.key === 'Escape') {
-            modal.classList.remove('active');
-            document.body.style.overflow = 'auto';
+            closeModal();
         } else if (e.key === 'ArrowLeft') {
-            const images = portfolioImages[currentProject];
-            currentImageIndex = (currentImageIndex - 1 + images.length) % images.length;
-            updateCarousel();
+            modalPrev.click();
         } else if (e.key === 'ArrowRight') {
-            const images = portfolioImages[currentProject];
-            currentImageIndex = (currentImageIndex + 1) % images.length;
-            updateCarousel();
+            modalNext.click();
         }
     }
 });
-
-// Parallax effect on scroll
-window.addEventListener('scroll', function() {
-    const scrolled = window.pageYOffset;
-    const header = document.querySelector('header');
