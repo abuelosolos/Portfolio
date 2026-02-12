@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="icon" href="Abicon.png" type="image/png">
+    <link rel="icon" href="Abicon.webp" type="image/webp">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>UI Showcase - Abuelos Portfolio</title>
@@ -577,40 +577,40 @@
                 <div class="slider-wrapper">
                     <div class="slider-track" data-slider="0">
                         <div class="slider-image-wrapper" data-index="0">
-                            <img src="Loading.png?w=1200&h=800&fit=crop" alt="Game Engine UI 1" class="slider-image">
+                            <img src="Loading.webp?w=1200&h=800&fit=crop" alt="Game Engine UI 1" class="slider-image">
                         </div>
                         <div class="slider-image-wrapper" data-index="1">
-                            <img src="ProjectLoading.png?w=1200&h=800&fit=crop" alt="Game Engine UI 2" class="slider-image">
+                            <img src="ProjectLoading.webp?w=1200&h=800&fit=crop" alt="Game Engine UI 2" class="slider-image">
                         </div>
                         <div class="slider-image-wrapper" data-index="2">
-                            <img src="temp.png?w=1200&h=800&fit=crop" alt="Game Engine UI 3" class="slider-image">
+                            <img src="temp.webp?w=1200&h=800&fit=crop" alt="Game Engine UI 3" class="slider-image">
                         </div>
                         <div class="slider-container">
                 <div class="slider-wrapper">
                     <div class="slider-track" data-slider="0">
                         <div class="slider-image-wrapper" data-index="0">
-                            <img src="Core.png?w=1200&h=800&fit=crop" alt="Game Engine UI 4" class="slider-image">
+                            <img src="Core.webp?w=1200&h=800&fit=crop" alt="Game Engine UI 4" class="slider-image">
                         </div>
                           <div class="slider-image-wrapper" data-index="0">
-                            <img src="Sample.png?w=1200&h=800&fit=crop" alt="Game Engine UI 5" class="slider-image">
+                            <img src="Sample.webp?w=1200&h=800&fit=crop" alt="Game Engine UI 5" class="slider-image">
                         </div>
                           <div class="slider-image-wrapper" data-index="0">
-                            <img src="Learn.png?w=1200&h=800&fit=crop" alt="Game Engine UI 6" class="slider-image">
+                            <img src="Learn.webp?w=1200&h=800&fit=crop" alt="Game Engine UI 6" class="slider-image">
                         </div>
                           <div class="slider-image-wrapper" data-index="0">
-                            <img src="EngineDefault.png?w=1200&h=800&fit=crop" alt="Game Engine UI 7" class="slider-image">
+                            <img src="EngineDefault.webp?w=1200&h=800&fit=crop" alt="Game Engine UI 7" class="slider-image">
                         </div>
                           <div class="slider-image-wrapper" data-index="0">
-                            <img src="EngineBuild.png?w=1200&h=800&fit=crop" alt="Game Engine UI 8" class="slider-image">
+                            <img src="EngineBuild.webp?w=1200&h=800&fit=crop" alt="Game Engine UI 8" class="slider-image">
                         </div>
                         <div class="slider-image-wrapper" data-index="0">
-                            <img src="EngineOverlay.png?w=1200&h=800&fit=crop" alt="Game Engine UI 9" class="slider-image">
+                            <img src="EngineOverlay.webp?w=1200&h=800&fit=crop" alt="Game Engine UI 9" class="slider-image">
                         </div>
                         <div class="slider-image-wrapper" data-index="0">
-                            <img src="EngineWindowOver.png?w=1200&h=800&fit=crop" alt="Game Engine UI 10" class="slider-image">
+                            <img src="EngineWindowOver.webp?w=1200&h=800&fit=crop" alt="Game Engine UI 10" class="slider-image">
                         </div>
                         <div class="slider-image-wrapper" data-index="0">
-                            <img src="EngineBuild.png?w=1200&h=800&fit=crop" alt="Game Engine UI 11" class="slider-image">
+                            <img src="EngineBuild.webp?w=1200&h=800&fit=crop" alt="Game Engine UI 11" class="slider-image">
                         </div>
                         
                     </div>

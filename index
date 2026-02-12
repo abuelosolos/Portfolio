@@ -1,7 +1,7 @@
 // <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="icon" href="Abicon.png" type="image/png">
+    <link rel="icon" href="Abicon.webp" type="image/webp">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Abuelos Portfolio</title>
@@ -772,7 +772,7 @@
         <div class="portfolio-grid">
             <!-- Portfolio Item 1 -->
             <div class="portfolio-item" data-index="0">
-                <img src="EnginecCover.png" 
+                <img src="EnginecCover.webp" 
                      alt="Mobile App Design" class="portfolio-image">
                 <div class="portfolio-overlay">
                     <div class="portfolio-number">01</div>
@@ -790,7 +790,7 @@
 
             <!-- Portfolio Item 2 -->
             <div class="portfolio-item" data-index="1">
-                <img src="AssetStoreCover.png" 
+                <img src="AssetStoreCover.webp" 
                      alt="Dashboard Design" class="portfolio-image">
                 <div class="portfolio-overlay">
                     <div class="portfolio-number">02</div>
@@ -808,7 +808,7 @@
 
             <!-- Portfolio Item 3 -->
             <div class="portfolio-item" data-index="2">
-                <img src="DefiCover.png" 
+                <img src="DefiCover.webp" 
                      alt="Website Redesign" class="portfolio-image">
                 <div class="portfolio-overlay">
                     <div class="portfolio-number">03</div>
@@ -827,7 +827,7 @@
 
             <!-- Portfolio Item 4 -->
             <div class="portfolio-item" data-index="3">
-                <img src="ShoeCover.png" 
+                <img src="ShoeCover.webp" 
                      alt="App Interface" class="portfolio-image">
                 <div class="portfolio-overlay">
                     <div class="portfolio-number">04</div>
@@ -847,7 +847,7 @@
 
             <!-- Portfolio Item 5 -->
             <div class="portfolio-item" data-index="5">
-                <img src="AdminCover.png" 
+                <img src="AdminCover.webp" 
                      alt="SaaS Platform" class="portfolio-image">
                 <div class="portfolio-overlay">
                     <div class="portfolio-number">05</div>
