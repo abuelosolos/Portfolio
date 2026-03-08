@@ -369,6 +369,16 @@ header .cta-button {
     max-width: 800px;
     margin: 0 auto 4rem auto;
 }
+.about-description2 {
+    font-size: 1.25rem;
+    line-height: 1.8;
+    color: var(--text-secondary);
+    text-align: left;
+    max-width: 800px;
+    margin: 3rem auto 2rem auto;
+    margin-left: auto;
+}
+
 
 .tools-grid {
     display: grid;
