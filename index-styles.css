@@ -433,28 +433,30 @@ h2 {
 
 /* View UI Button */
 .view-ui-btn {
-    position: absolute;
-    top: 1.5rem;
-    right: 1.5rem;
-    opacity: 0;
-    font-family: 'Space Mono', monospace;
-    font-size: 0.75rem;
-    color: var(--text-primary);
-    background: rgba(37, 35, 35, 0.795);
-    backdrop-filter: blur(10px);
-    border: 1px solid rgba(239, 226, 226, 0.4);
-    padding: 0.6rem 1.2rem;
-    border-radius: 6px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    pointer-events: none;
-    text-decoration: none;
+    position: relative;
+    margin-top: 1.5rem;
     display: inline-block;
-    z-index: 10;
-    transform: translateX(10px);
+    padding: 0.75rem 1.5rem;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: white;
+    text-decoration: none;
+    font-family: 'Space Mono', monospace;
+    font-size: 0.875rem;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+    border-radius: 4px;
+    backdrop-filter: blur(10px);
+    transition: all 0.3s ease;
 }
+
+.view-ui-btn:hover {
+    background: rgba(255, 255, 255, 0.2);
+    border-color: rgba(255, 255, 255, 0.4);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(255, 255, 255, 0.1);
+}
+
 
 .portfolio-item:hover .view-ui-btn {
     opacity: 1;
@@ -462,11 +464,6 @@ h2 {
     pointer-events: auto;
 }
 
-.view-ui-btn:hover {
-    background: rgba(255, 255, 255, 0.25);
-    box-shadow: 0 0 20px rgba(255, 255, 255, 0.4);
-    border-color: rgba(255, 255, 255, 0.6);
-}
 
 /* Mobile: Show view button on tap */
 .portfolio-item.active .view-ui-btn {
