@@ -913,32 +913,25 @@ footer p {
 
 /* Responsive */
 @media (max-width: 768px) {
-    .portfolio-grid {
-        grid-template-columns: 1fr;
-        gap: 2rem;
+    .navbar {
+        padding: 1rem 1.5rem;
     }
-
-    h2 {
-        font-size: 3.5rem;
-        letter-spacing: -2px;
+    
+    .navbar .logo {
+        display: none;
     }
-
-    .subtitle {
-        font-size: 0.9rem;
-        letter-spacing: 4px;
+    
+    .nav-links {
+        gap: 1.5rem;
     }
-
-    .section-title {
-        font-size: 3rem;
+    
+    .nav-links > a {
+        font-size: 0.85rem;
     }
-
-    .portfolio-item {
-        border: 1px solid rgba(255, 255, 255, 0.15);
-    }
-
-    .portfolio-description,
-    .portfolio-tags {
-        opacity: 1;
-        transform: translateY(0);
+    
+    .social-icons {
+        padding-left: 0;
+        border-left: none;
+        gap: 1rem;
     }
 }
