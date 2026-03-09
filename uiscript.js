@@ -67,7 +67,7 @@ class ImageSlider {
 
 // Initialize all sliders
 const sliders = [];
-for (let i = 0; i < 5; i++) {
+for (let i = 0; i < 6; i++) {
     sliders.push(new ImageSlider(i));
 }
 
