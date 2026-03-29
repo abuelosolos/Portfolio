@@ -35,7 +35,6 @@ svg { display: block; }
 
 .divider { height: 1px; background: var(--border); }
 
-/* Nav */
 #nav {
   position: fixed;
   top: 0; left: 0; right: 0;
@@ -72,17 +71,15 @@ svg { display: block; }
 .nav-links a:hover::after { width: 100%; }
 @media (max-width: 480px) { .nav-links { gap: 16px; } }
 
-/* Page hero */
 .page-hero {
   min-height: 100vh;
-  position: relative;
   display: flex;
   align-items: flex-end;
   justify-content: flex-start;
-  padding: 120px 0 96px;
+  padding: 130px 0 88px;
 }
 .page-hero .wrap { width: 100%; }
-.hero-content { max-width: 680px; }
+.hero-content { max-width: 700px; }
 
 .hero-eyebrow {
   display: inline-flex;
@@ -124,7 +121,6 @@ svg { display: block; }
   animation: up 0.75s 0.34s ease forwards;
 }
 
-/* Project sections */
 .section--alt { background: var(--bg-alt); }
 .project-section { padding: 80px 0 72px; }
 
@@ -223,9 +219,6 @@ svg { display: block; }
 }
 @media (max-width: 700px) { .proj-cta { margin-top: 0; } }
 
-/* ── Slider ── */
-
-/* Outer container clips the sliding track */
 .slider-wrap {
   position: relative;
   border-radius: 16px;
@@ -234,7 +227,6 @@ svg { display: block; }
   background: var(--card);
 }
 
-/* Single horizontal row of slides — JS moves this with translateX */
 .slider-track {
   display: flex;
   flex-wrap: nowrap;
@@ -242,14 +234,12 @@ svg { display: block; }
   will-change: transform;
 }
 
-/* Each slide is exactly as wide as the container, never shrinks */
 .slide {
   min-width: 100%;
   flex-shrink: 0;
   position: relative;
 }
 
-/* Fixed height frame — contain shows the full image with no cropping */
 .slide img {
   width: 100%;
   height: 600px;
@@ -274,7 +264,6 @@ svg { display: block; }
   letter-spacing: 0.04em;
 }
 
-/* Prev / Next buttons */
 .slider-btn {
   position: absolute;
   top: 50%;
@@ -311,7 +300,6 @@ svg { display: block; }
   .slider-btn svg { width: 14px; height: 14px; }
 }
 
-/* Dots */
 .slider-dots {
   position: absolute;
   bottom: 16px;
@@ -333,7 +321,6 @@ svg { display: block; }
   transform: scale(1.4);
 }
 
-/* Counter badge */
 .slider-counter {
   position: absolute;
   top: 14px; right: 14px;
@@ -347,7 +334,6 @@ svg { display: block; }
   z-index: 10;
 }
 
-/* Footer */
 #footer { border-top: 1px solid var(--border); padding: 56px 0 28px; }
 .foot-top {
   display: flex;
@@ -381,4 +367,11 @@ svg { display: block; }
 }
 @keyframes pulse {
   0%, 100% { opacity: 1; } 50% { opacity: 0.3; }
+}
+
+@media (max-width: 640px) {
+  .page-hero {
+    align-items: flex-start;
+    padding-top: 100px;
+  }
 }
