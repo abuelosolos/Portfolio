@@ -1,249 +1,297 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="icon" href="Images/Abicon.png" type="image/png">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Abuelos Portfolio</title>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;900&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="index-styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Abuelo Solos — UI/UX Designer & Digital Artist</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- Animated Grid Background -->
-    <div class="grid-background"></div>
 
-    <!-- Glowing Orbs -->
-    <div class="glow-orbs">
-        <div class="orb"></div>
-        <div class="orb"></div>
-        <div class="orb"></div>
+<!-- Nav -->
+<header id="nav">
+  <div class="nav-row">
+    <a href="#hero" class="nav-logo">Abuelo<span>.</span></a>
+    <nav class="nav-links">
+      <a href="#skills">Skills</a>
+      <a href="#work">Work</a>
+      <a href="#connect">Connect</a>
+      <a href="showcase.html" class="nav-showcase">Showcase</a>
+    </nav>
+  </div>
+</header>
+
+<!-- Hero -->
+<section id="hero">
+  <div class="wrap">
+    <div class="hero-content">
+      <div class="hero-eyebrow">Batomate Kumasi Samuel / Abuelo</div>
+      <h1 class="hero-name">Kumasi<em>/Abuelo</em></h1>
+      <p class="hero-role">UI/UX Designer | Digital Artist</p>
+      <div class="hero-chips">
+        <span class="chip">Product Design</span>
+        <span class="chip">UI Design</span>
+        <span class="chip">Art Illustration</span>
+        <span class="chip-live"><span class="live-dot"></span>Available for hire</span>
+      </div>
+      <a href="showcase.html" class="hero-showcase-btn">
+        View UI Library
+      </a>
     </div>
+  </div>
+</section>
 
-    <!-- Navbar -->
-<nav class="navbar">
-    <a href="#" class="logo">ABUELO SOLOS</a>
-    <div class="nav-links">
-        <a href="#">Home</a>
-        <a href="#about">About</a>
-        <a href="#portfolio">Work</a>
+<div class="divider"></div>
+
+<!-- Skills -->
+<section id="skills" class="section section--alt">
+  <div class="wrap">
+    <div class="sec-label">Capabilities</div>
+    <h2 class="sec-title">What I do</h2>
+    <p class="sec-sub">I make complex designs into simple solutions <br> And when I'm not doin that I'm gaming, lol.</p>
+
+    <div class="skills-grid">
+
+      <div class="sk-card">
+        <div class="sk-ico">
+          <svg viewBox="0 0 24 24">
+            <rect x="3" y="3" width="18" height="18" rx="2.5"/>
+            <path d="M3 9h18"/>
+            <path d="M9 21V9"/>
+          </svg>
+        </div>
+        <div class="sk-name">UI Design</div>
+        <div class="sk-desc">Interfaces built around clarity, hierarchy, through predictive behavioural patterns.</div>
+        <div class="tags"><span class="tag">Figma</span><span class="tag">Design Systems</span><span class="tag">Prototyping</span></div>
+      </div>
+
+      <div class="sk-card">
+        <div class="sk-ico">
+          <svg viewBox="0 0 24 24">
+            <circle cx="11" cy="11" r="7"/>
+            <path d="M21 21l-4.35-4.35"/>
+            <path d="M11 8v6M8 11h6"/>
+          </svg>
+        </div>
+        <div class="sk-name">UX Research</div>
+        <div class="sk-desc">User flows, journey maps, and usability testing. Design decisions grounded in real behaviour.</div>
+        <div class="tags"><span class="tag">User Flows</span><span class="tag">Wireframing</span><span class="tag">Testing</span></div>
+      </div>
+
+      <div class="sk-card">
+        <div class="sk-ico">
+          <svg viewBox="0 0 24 24">
+            <polyline points="16 18 22 12 16 6"/>
+            <polyline points="8 6 2 12 8 18"/>
+          </svg>
+        </div>
+        <div class="sk-name">Frontend Dev</div>
+        <div class="sk-desc">HTML, CSS, JavaScript, React. I understand code, how its implemented and deployed to create web applications etc.</div>
+        <div class="tags"><span class="tag">React</span><span class="tag">HTML/CSS</span><span class="tag">Next.js</span></div>
+      </div>
+
+      <div class="sk-card">
+        <div class="sk-ico">
+          <svg viewBox="0 0 24 24">
+            <rect x="2" y="5" width="20" height="14" rx="2"/>
+            <path d="M2 10h20"/>
+            <path d="M6 15h4"/>
+            <path d="M14 15h4"/>
+          </svg>
+        </div>
+        <div class="sk-name">Fintech Design</div>
+        <div class="sk-desc">Crypto dashboards, payment flows, and financial interfaces that balance trust, clarity, and conversion.</div>
+        <div class="tags"><span class="tag">DeFi</span><span class="tag">Dashboards</span><span class="tag">Payments</span></div>
+      </div>
+
+      <div class="sk-card">
+        <div class="sk-ico">
+          <svg viewBox="0 0 24 24">
+            <circle cx="12" cy="12" r="10"/>
+            <path d="M8 14s1.5 2 4 2 4-2 4-2"/>
+            <path d="M9 9h.01M15 9h.01"/>
+            <path d="M12 2c2 2 4 3 4 6s-2 5-4 5-4-2-4-5 2-4 4-6z"/>
+          </svg>
+        </div>
+        <div class="sk-name">Digital Art</div>
+        <div class="sk-desc">Conceptual & Character illustration.</div>
+        <div class="tags"><span class="tag">Illustration</span><span class="tag">Branding</span><span class="tag">Visual Art</span></div>
+      </div>
+
+      <div class="sk-card">
+        <div class="sk-ico">
+          <svg viewBox="0 0 24 24">
+            <path d="M12 2L2 7l10 5 10-5-10-5z"/>
+            <path d="M2 17l10 5 10-5"/>
+            <path d="M2 12l10 5 10-5"/>
+          </svg>
+        </div>
+        <div class="sk-name">Brand Strategy</div>
+        <div class="sk-desc">Visual identity systems and design language that communicate a brand before anyone reads a word.</div>
+        <div class="tags"><span class="tag">Identity</span><span class="tag">Typography</span><span class="tag">Systems</span></div>
+      </div>
+
     </div>
-    <div class="social-icons">
-        <a href="https://linkedin.com/in/heisabuelo" target="_blank" title="LinkedIn">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
-            </svg>
-        </a>
-        <a href="https://x.com/abuelosolos" target="_blank" title="X (Twitter)">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
-            </svg>
-        </a>
-        <a href="https://behance.net/abuelosolos" target="_blank" title="Behance">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M6.5 4.5h3.5c1.2 0 2.1.3 2.8.9.6.6.9 1.4.9 2.4 0 .7-.2 1.3-.5 1.8-.3.5-.8.9-1.4 1.1.8.2 1.4.6 1.8 1.2.4.6.6 1.3.6 2.1 0 1.1-.4 2-1.1 2.6-.7.6-1.7.9-3 .9H6.5V4.5zm2.3 4.8h1.8c.6 0 1-.1 1.3-.4.3-.3.4-.6.4-1.1 0-.5-.1-.9-.4-1.1-.3-.3-.7-.4-1.3-.4H8.8v3zm0 5.7h2c.6 0 1.1-.1 1.4-.4.3-.3.5-.7.5-1.2s-.2-.9-.5-1.2c-.3-.3-.8-.4-1.4-.4h-2v3.2zM15.5 6h6v1.5h-6V6zm2.8 3.5c1.2 0 2.2.4 3 1.1.8.7 1.2 1.8 1.2 3.2v.7h-6.5c.1.7.4 1.2.8 1.5.4.3.9.5 1.5.5.5 0 .9-.1 1.2-.3.3-.2.6-.5.7-.9h2.3c-.2.9-.7 1.6-1.4 2.2-.7.6-1.6.9-2.8.9-1.3 0-2.3-.4-3.1-1.2-.8-.8-1.2-1.9-1.2-3.3s.4-2.5 1.2-3.3c.8-.7 1.8-1.1 3.1-1.1zm-1.8 3.3h4.2c-.1-.6-.3-1-.7-1.3-.4-.3-.8-.4-1.4-.4-.6 0-1 .1-1.4.4-.4.3-.6.7-.7 1.3z"/>
-            </svg>
-        </a>
-        <a href="mailto:kbatomate@gmail.com" title="Email">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
-                <polyline points="22,6 12,13 2,6"></polyline>
-            </svg>
-        </a>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- Work -->
+<section id="work" class="section">
+  <div class="wrap">
+    <div class="sec-label">Selected Work</div>
+    <h2 class="sec-title">Projects</h2>
+    <p class="sec-sub">A selection of my UI/UX and digital art projects.</p>
+
+    <div class="work-grid">
+
+      <div class="wc-lg">
+        <div class="wcard">
+          <div class="wthumb">
+            <img src="Images/EngineCover.webp" alt="G'Scapes" loading="lazy">
+            <div class="wthumb-overlay"></div>
+          </div>
+          <div class="wbody">
+            <div class="wtag">AI Powered Game Development Engine</div>
+            <div class="wtitle">G'Scapes Game Engine</div>
+            <div class="wdesc">An AI Powered game engine with a chatbot which helps beginner and advanced game devs advance project development and learning easily.</div>
+          </div>
+          <div class="wfoot">
+            <span class="wyear">2026</span>
+            <a href="showcase.html#project-1" class="wcta">
+              View project
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="wc-sm">
+        <div class="wcard">
+          <div class="wthumb">
+            <img src="Images/ArtCover1.webp" alt="Digital Art" loading="lazy">
+            <div class="wthumb-overlay"></div>
+          </div>
+          <div class="wbody">
+            <div class="wtag">Check Out My Art</div>
+            <div class="wtitle">Digital Art</div>
+            <div class="wdesc">Click the button below to check out my illustrations on pinterest</div>
+          </div>
+          <div class="wfoot">
+            <span class="wyear">2025</span>
+            <a href="https://pinterest.com/HeisAbuelo/art" class="wcta">
+              View series
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="wc-hf">
+        <div class="wcard">
+          <div class="wthumb">
+            <img src="Images/OverviewMac.webp" alt="Roomly" loading="lazy">
+            <div class="wthumb-overlay"></div>
+          </div>
+          <div class="wbody">
+            <div class="wtag">Hotel Admin Dashboard</div>
+            <div class="wtitle">Roomly Dashboard</div>
+            <div class="wdesc">Hotel Dashboard with Revenue Page, Room management and more allowing staff manage the hotel with ease.</div>
+          </div>
+          <div class="wfoot">
+            <span class="wyear">2025</span>
+            <a href="showcase.html#project-3" class="wcta">
+              View project
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="wc-hf">
+        <div class="wcard">
+          <div class="wthumb">
+            <img src="Images/DefiCover.webp" alt="Defi Cover" loading="lazy">
+            <div class="wthumb-overlay"></div>
+          </div>
+          <div class="wbody">
+            <div class="wtag">Pair Swap, NFT Collection, Trade Tokens</div>
+            <div class="wtitle">Web3 Defi App</div>
+            <div class="wdesc">Crypto Swap, Stake and Trade interface.</div>
+          </div>
+          <div class="wfoot">
+            <span class="wyear">2025</span>
+            <a href="showcase.html#project-4" class="wcta">
+              View project
+            </a>
+          </div>
+        </div>
+      </div>
+
     </div>
-</nav>
+  </div>
+</section>
 
-    <!-- Header Section -->
-    <header>
-        <div class="header-content">
-            <h2>Batomate K Samuel</h2>
-            <p class="subtitle">UI/UX Designer</p>
-            <div class="glowing-line"></div>
-            <p class="intro-text">
-                My name is Kumasi but i go by an alias Abuelo or AbueloSolos,
-                I create intuitive and simple user centered designs and
-                by paying attention to detail I transform complex problems into simple solutions that are
-                easiy accessible to users.
-            </p>
-        </div>
-        <div class="scroll-indicator">
-            <svg viewBox="0 0 24 24">
-                <path d="M12 5v14M5 12l7 7 7-7"/>
-            </svg>
-        </div>
-    </header>
+<div class="divider"></div>
 
-    <!-- About Me Section -->
-    <section id="about" class="about-section">
-        <div class="about-container">
-            <div class="section-header">
-                <h2 class="section-title">About Me</h2>
-                <p class="section-subtitle">What I Work With</p>
-            </div>
+<!-- Connect -->
+<section id="connect" class="section section--alt">
+  <div class="wrap">
+    <div class="sec-label">Links</div>
+    <h2 class="sec-title">Connect</h2>
+    <p class="sec-sub">Find my work, reach out directly, or say hello. Always open to interesting projects and conversations.</p>
 
-            <div class="about-content">
-                <p class="about-description">
-                    I'm a freelance UI/UX Designer and I specialize in creating user-centered designs that blend aesthetics with functionality. 
-                    My approach focuses on understanding user needs and translating them into intuitive digital experiences.
-                    I'm also undertaking Computer Science to get my Bachelors Degree.
-                </p>
+    <div class="connect-circles">
 
-                <div class="tools-grid">
-                    <div class="tool-category">
-                        <h3>Design Tools</h3>
-                        <div class="tool-items">
-                            <span class="tool-tag">Figma</span>
-                            <span class="tool-tag">Adobe XD</span>
-                            <span class="tool-tag">Photoshop</span>
-                            <span class="tool-tag">Ibis Paint</span>
-                        </div>
-                    </div>
+      <a class="circ" href="mailto:kbatomate@gmail.com" data-label="Email">
+        <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+      </a>
 
-                    <div class="tool-category">
-                        <h3>Development</h3>
-                        <div class="tool-items">
-                            <span class="tool-tag">HTML/CSS</span>
-                            <span class="tool-tag">JavaScript</span>
-                            <span class="tool-tag">React</span>
-                            <span class="tool-tag">Tailwind</span>
-                        </div>
-                    </div>
+      <a class="circ" href="https://x.com/abuelosolos" target="_blank" rel="noopener" data-label="X (Twitter)">
+        <svg class="f" viewBox="0 0 24 24" width="20" height="20"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+      </a>
 
-                    <div class="tool-category">
-                        <h3>Specialties</h3>
-                        <div class="tool-items">
-                            <span class="tool-tag">UI Design</span>
-                            <span class="tool-tag">UX Research</span>
-                            <span class="tool-tag">Prototyping</span>
-                            <span class="tool-tag">Responsive Design</span>
-                            <span class="tool-tag">Design Systems</span>
-                        </div>
-                    </div>
-                </div>
+      <a class="circ" href="https://linkedin.com/in/abuelosolos" target="_blank" rel="noopener" data-label="LinkedIn">
+        <svg viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+      </a>
 
-                <p class="about-description2">
-                    I play Mobile battle royale games and read alot of manga. <br>
-                    I'm also a digital artist and an aspiring game dev btw, and I'm open to work so feel free to click the button below to say Hi
-                </p>
+      <a class="circ" href="https://behance.net/abuelosolos" target="_blank" rel="noopener" data-label="Behance">
+        <svg class="f" viewBox="0 0 24 24" width="20" height="20"><path d="M7.5 10.5c.97 0 1.75-.78 1.75-1.75S8.47 7 7.5 7H3v3.5h4.5zm.25 3.25c0-1.1-.9-2-2-2H3V16h2.75c1.1 0 2-.9 2-2zM2 5h6c2.2 0 4 1.8 4 4 0 1.1-.45 2.1-1.17 2.83C12.17 12.5 13 13.67 13 15c0 2.2-1.8 4-4 4H2V5zm15 9h5.5c-.28 1.4-1.56 2.5-3 2.5-1.38 0-2.5-.9-3-2.5H17zm-1.5-1c0-2.5 2-4.5 4.5-4.5s4.5 2 4.5 4.5c0 .34-.04.67-.1 1H15.6c-.1-.33-.1-.67-.1-1zm4.5-3c-1.38 0-2.5 1.12-2.5 2.5H22.5C22.5 11.12 21.38 10 20 10zm-2.25-3.5h4.5v1H17.75v-1z"/></svg>
+      </a>
 
-                <a href="mailto:kbatomate@gmail.com" class="cta-button">Hello!</a>
-            </div>
-        </div>
-    </section>
+      <a class="circ" href="https://pinterest.com/HeisAbuelo" target="_blank" rel="noopener" data-label="Pinterest">
+        <svg class="f" viewBox="0 0 24 24" width="20" height="20"><path d="M12 2C6.477 2 2 6.477 2 12c0 4.236 2.636 7.855 6.356 9.312-.088-.791-.167-2.005.035-2.868.181-.78 1.172-4.97 1.172-4.97s-.299-.598-.299-1.482c0-1.388.806-2.428 1.808-2.428.853 0 1.267.641 1.267 1.408 0 .858-.546 2.14-.828 3.33-.236.995.499 1.806 1.476 1.806 1.771 0 3.135-1.867 3.135-4.56 0-2.385-1.714-4.052-4.163-4.052-2.836 0-4.498 2.126-4.498 4.322 0 .856.33 1.772.741 2.272.081.099.093.185.069.285-.076.311-.244.995-.277 1.134-.044.183-.146.222-.337.134-1.249-.581-2.03-2.407-2.03-3.874 0-3.154 2.292-6.052 6.608-6.052 3.469 0 6.165 2.473 6.165 5.776 0 3.447-2.173 6.22-5.19 6.22-1.013 0-1.966-.527-2.292-1.148l-.623 2.378c-.226.869-.835 1.958-1.244 2.621.937.29 1.931.446 2.962.446 5.523 0 10-4.477 10-10S17.523 2 12 2z"/></svg>
+      </a>
 
-    <!-- Portfolio Section -->
-    <section id="portfolio" class="portfolio-section">
-        <div class="section-header">
-            <h2 class="section-title">My Work</h2>
-            <p class="section-subtitle">Featured Projects</p>
-        </div>
-
-        <div class="portfolio-grid">
-            <!-- Portfolio Item 1 -->
-            <div class="portfolio-item" data-index="0">
-                <img src="Images/EngineCover.webp" 
-                     alt="Mobile App Design" class="portfolio-image">
-                <div class="portfolio-overlay">
-                    <div class="portfolio-number">01</div>
-                    <h3 class="portfolio-title">AI Powered Game Engine</h3>
-                    <p class="portfolio-description">
-                        Unity inspired game engine with an AI interface that
-                         helps enhance game dev experience and
-                          accelerates learning.
-                    </p>
-                    <div class="portfolio-tags">
-                        <span class="tag">Game Engine</span>
-                        <span class="tag">UX Research</span>
-                        <span class="tag">Auto-Layout Design</span>
-                    </div>
-                    <a href="ui-showcase.html#game-engine" class="view-ui-btn">View UI</a>
-                </div>
-            </div>
-
-            <!-- Portfolio Item 2 -->
-            <div class="portfolio-item" data-index="1">
-                <img src="Images/AssetStoreCover.webp" 
-                     alt="Images/Dashboard Design" class="portfolio-image">
-                <div class="portfolio-overlay">
-                    <div class="portfolio-number">02</div>
-                    <h3 class="portfolio-title">Asset Store</h3>
-                    <p class="portfolio-description">
-                        Asset store supporting the AI powered game engine with a marketplace to download 
-                        games, asset packs, and tools within the game engine.
-                    </p>
-                    <div class="portfolio-tags">
-                        <span class="tag">Cart Page</span>
-                        <span class="tag">Asset Store</span>
-                        <span class="tag">Marketplace</span>
-                    </div>
-                    <a href="ui-showcase.html#asset-store" class="view-ui-btn">View UI</a>
-                </div>
-            </div>
-
-            <!-- Portfolio Item 3 -->
-            <div class="portfolio-item" data-index="2">
-                <img src="Images/DefiCover.webp" 
-                     alt="Website Redesign" class="portfolio-image">
-                <div class="portfolio-overlay">
-                    <div class="portfolio-number">03</div>
-                    <h3 class="portfolio-title">DeFi App</h3>
-                    <p class="portfolio-description">
-                        Mobile DeFi app with up to date feaures like prediction 
-                        markets and staking, as well an easy to navigate UI. 
-                    </p>
-                    <div class="portfolio-tags">
-                        <span class="tag">Mobile</span>
-                        <span class="tag">Web3</span>
-                        <span class="tag">DeFi</span>
-                        <span class="tag">Marketplace</span>
-                        <span class="tag">Fintech</span>
-                    </div>
-                    <a href="ui-showcase.html#wallet-app" class="view-ui-btn">View UI</a>
-                </div>
-            </div>
-
-
-            <!-- Portfolio Item 5 -->
-            <div class="portfolio-item" data-index="5">
-                <img src="Images/AdminCover.webp" 
-                     alt="SaaS Platform" class="portfolio-image">
-                <div class="portfolio-overlay">
-                    <div class="portfolio-number">05</div>
-                    <h3 class="portfolio-title">Admin Dashboard</h3>
-                    <p class="portfolio-description">
-                        Hotel room management tool with collaborative features and team workflows
-                    </p>
-                    <div class="portfolio-tags">
-                        <span class="tag">Analytics</span>
-                        <span class="tag">Control Panel</span>
-                        <span class="tag">Transactions</span>
-                    </div>
-                    <a href="ui-showcase.html#admin-dashboard" class="view-ui-btn">View UI</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Modal for carousel -->
-    <div class="modal" id="imageModal">
-        <span class="close-modal" id="closeModal">&times;</span>
-        <div class="modal-content-wrapper">
-            <div class="carousel-nav prev" id="prevImage">‹</div>
-            <img class="modal-content" id="modalImage" alt="Portfolio image">
-            <div class="carousel-nav next" id="nextImage">›</div>
-        </div>
-        <div class="carousel-counter" id="carouselCounter">1 / 1</div>
     </div>
+  </div>
+</section>
 
-    <!-- Footer -->
-    <footer>
-        <div class="footer-content">
-            <h3 class="footer-title">Open To Work</h3>
-            <p>Available for freelance projects and collaborations</p>
-            <p>&copy; 2026 AbueloSolos. All rights reserved.</p>
-        </div>
-    </footer>
+<div class="divider"></div>
 
-    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
-    <script src="index-script.js"></script>
+<!-- Footer -->
+<footer id="footer">
+  <div class="wrap">
+    <div class="foot-top">
+      <div>
+        <div class="foot-brand">Abuelo<span>.</span></div>
+        <p class="foot-tag">UI/UX Designer and Digital Artist crafting interfaces that feel inevitable. Open to new projects.</p>
+      </div>
+      <nav class="foot-nav">
+        <a href="#hero">Home</a>
+        <a href="#skills">Skills</a>
+        <a href="#work">Work</a>
+        <a href="#connect">Connect</a>
+      </nav>
+    </div>
+    <div class="foot-bottom">
+      <span class="foot-copy">2025 Abuelo Solos. All rights reserved.</span>
+      <div class="foot-status"><span class="live-dot"></span>Available for hire</div>
+    </div>
+  </div>
+</footer>
+
+<script src="main.js"></script>
 </body>
 </html>
