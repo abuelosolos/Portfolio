@@ -374,3 +374,27 @@ svg { display: block; }
     align-items: center;
   }
 }
+
+.nav-social { display: none; }
+
+@media (max-width: 640px) {
+  .nav-links { display: none; }
+  .nav-social {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+  }
+  .nav-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 28px; height: 28px;
+  }
+  .nav-icon svg {
+    width: 17px; height: 17px;
+    stroke: var(--text-2); fill: none;
+    stroke-width: 1.75; stroke-linecap: round; stroke-linejoin: round;
+    display: block;
+  }
+  .nav-icon svg.f { stroke: none; fill: var(--text-2); }
+}
