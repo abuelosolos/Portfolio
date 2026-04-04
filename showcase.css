@@ -371,13 +371,6 @@ svg { display: block; }
 
 @media (max-width: 640px) {
   .page-hero {
-    align-items: flex-start;
-    padding-top: 100px;
-  }
-  .hero-content {
-    text-align: center;
-  }
-  .hero-eyebrow {
-    justify-content: center;
+    align-items: center;
   }
 }

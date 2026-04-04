@@ -527,20 +527,6 @@ stroke-width: 2.2; stroke-linecap: round; stroke-linejoin: round;
 
 @media (max-width: 640px) {
 #hero {
-  align-items: flex-start;
-  padding-top: 100px;
-}
-.hero-content {
-  text-align: center;
-}
-.hero-eyebrow {
-  justify-content: center;
-}
-.hero-chips {
-  justify-content: center;
-}
-.hero-showcase-btn {
-  margin-left: auto;
-  margin-right: auto;
+  align-items: center;
 }
 }
